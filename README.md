@@ -4,7 +4,7 @@ An interactive and animated image carousel showcasing popular anime titles. Buil
 
 ## 📸 Preview
 
-![Carousel Preview](Video/Untitled%20video%20-%20Made%20with%20Clipchamp.mp4)
+![Carousel Preview](Video/Video-Clip.mp4)
 
 ## 🚀 Features
 
