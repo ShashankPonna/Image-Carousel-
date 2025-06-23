@@ -1,0 +1,338 @@
+/* https://wallpapercave.com/wp/wp5432785.jpg 
+https://4kwallpapers.com/images/wallpapers/demon-slayer-1920x1200-10716.jpg
+https://images.freecreatives.com/wp-content/uploads/2016/03/Free-HD-Pokemon-Wallpapers.jpg
+https://th.bing.com/th/id/OIP.hfShz_Of40_RXkEjzhNmZQHaEK?rs=1&pid=ImgDetMain */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto, "sans-serif";
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 1140px;
+  max-width: 80%;
+  height: 50px;
+  margin: auto;
+  z-index: 100;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+}
+
+nav {
+  display: flex;
+  gap: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  /* padding: 10px; */
+}
+.carousel {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -50px;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.items {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.content {
+  position: absolute;
+  /* z-index: 10; */
+  top: 20%;
+  width: 1140px;
+  max-width: 80%;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: white;
+}
+
+.anime {
+  font-size: 1.5em;
+  font-weight: 900;
+  letter-spacing: 0.21em;
+}
+
+.title,
+.topic {
+  font-size: 5em;
+  font-weight: 900;
+}
+.title {
+  /* color: rgb(255, 158, 31); */
+  line-height: 0.9em;
+  margin-top: 15px;
+}
+
+.topic {
+  color: rgb(255, 165, 55);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.des {
+  font-weight: 700;
+}
+
+.content button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 30px;
+  margin-top: 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.797);
+  transform: scale(1.05);
+  color: rgb(46, 46, 46);
+  text-shadow: none;
+}
+.thumbnail {
+  display: flex;
+  gap: 14px;
+  flex-direction: row;
+  position: absolute;
+  width: max-content;
+  top: 60%;
+  left: 57%;
+  z-index: 10;
+}
+.titem {
+  height: 270px;
+  width: 150px;
+  position: relative;
+}
+
+.titem img {
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.tcontent {
+  position: absolute;
+  bottom: 7px;
+  left: 10px;
+  color: white;
+  font-weight: 600;
+}
+.anime,
+.title,
+.Ttitle,
+.description {
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.des{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.arrow {
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 10;
+}
+
+.arrow button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-size: 25px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2px;
+  color: aliceblue;
+  transition: 0.5s;
+}
+
+.arrow button:hover {
+  background-color: rgba(255, 255, 255, 0.581);
+  color: rgb(90, 87, 87);
+}
+
+.items:nth-child(1) {
+  z-index: 1;
+}
+
+.items:nth-child(1) .anime,
+.items:nth-child(1) .title,
+.items:nth-child(1) .topic,
+.items:nth-child(1) .des,
+.items:nth-child(1) button {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear forwards;
+}
+
+@keyframes showContent {
+  to {
+    transform: translateY(0px);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.items:nth-child(1) .title {
+  animation-delay: 1.2s;
+}
+.items:nth-child(1) .topic {
+  animation-delay: 1.4s;
+}
+.items:nth-child(1) .des {
+  animation-delay: 1.6s;
+}
+.items:nth-child(1) button {
+  animation-delay: 1.8s;
+}
+
+.carousel.next .list .items:nth-child(1) img {
+  height: 270px;
+  width: 150px;
+  position: absolute;
+  top: 60%;
+  left: 57%;
+  border-radius: 10px;
+  animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+  to {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.carousel.next .thumbnail .titem:nth-last-child(1) {
+  width: 0px;
+  /* height: 0; */
+  overflow: hidden;
+  animation: showThumbnail 0.5s 1 linear forwards;
+}
+
+@keyframes showThumbnail {
+  to {
+    width: 150px;
+  }
+}
+
+.carousel.next .thumbnail {
+  transform: translateX(150px);
+  animation: transformThumbnail 0.5s 1 linear forwards;
+}
+
+@keyframes transformThumbnail {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.carousel.prev .list .items:nth-child(2) img {
+    z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: imageOut 0.5s 1 linear forwards;
+}
+
+@keyframes imageOut {
+  to {
+    width: 150px;
+    height: 270px;
+    top: 60%;
+    left: 57%;
+    opacity: 1;
+    border-radius: 10px;
+  }
+}
+
+.carousel.prev .thumbnail .titem:nth-child(1){
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s 1 linear forwards;
+}
+
+@media (max-width: 1400px) {
+    .thumbnail{
+        display: none;
+    }
+}
+
+@media (max-width: 650px){
+    .anime{
+        font-size: 16px;
+    }
+    .title,.topic{
+        font-size: 3em;
+    }
+} 
+
+@media (max-width: 490px) {
+        .title,.topic{
+        font-size: 2em;
+        margin-top: 5px;
+    }
+    .des{
+        font-size: 12px;
+          overflow-y: auto; /* for vertical scroll */
+  max-height: 25vh;
+  margin-top: 5px;
+    }
+    .arrow{
+        margin-top: 50px;
+    }
+}
